@@ -23,7 +23,25 @@
 </head>
 <body>
     <div id="root">
-        
+        <div class="container ">
+            <!-- header -->
+            <header>
+                <figure class=" mt-5 w-25 mx-auto">
+                    <img class="img-fluid" src="img/mobile-logo.png" alt="Boolean">
+                </figure>
+            </header>
+
+            <!-- main -->
+            <main class="mx-auto">
+                <h2 class="mb-4 text-center">Cose da fare per l'esercizio di oggi</h2>
+                <!-- list -->
+                <ul class="list-group" >
+                    <li v-for="task in tasks" :key="task.id" class="list-group-item text-center cursor-pointer">
+                        <span @click="toggleTaskStatus(task)" :class="{ 'text-decoration-line-through': task.done }">{{ task.text }}</span>
+                    </li>
+                </ul>
+            </main>
+        </div>
     </div>
 </body>
 </html>

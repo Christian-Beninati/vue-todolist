@@ -20,6 +20,11 @@ const app = createApp({
         toggleTaskStatus(task) {
             task.done = !task.done;
         },
+
+        // Funz per eliminare un task
+        deleteTask(targetId) {
+            this.tasks = this.tasks.filter(task => targetId !== task.id);
+        }
     },
 });
 

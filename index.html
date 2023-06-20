@@ -34,9 +34,14 @@
             <!-- main -->
             <main class="mx-auto">
                 <h2 class="mb-4 text-center">Cose da fare per l'esercizio di oggi</h2>
+
+                <!-- Input per la ricerca (filtro) -->
+                <div>
+                    <input  v-model.trim="searchText" type="text" placeholder="Cerca task..." class="form-control mb-3">
+                </div>
                 <!-- list -->
                 <ul class="list-group" >
-                    <li v-for="task in tasks" :key="task.id" class="list-group-item cursor-pointer d-flex align-items-center justify-content-between">
+                    <li v-for="task in filteredTasks" :key="task.id" class="list-group-item cursor-pointer d-flex align-items-center justify-content-between">
                         <span @click="toggleTaskStatus(task)" :class="{ 'text-decoration-line-through': task.done }">{{ task.text }}</span>
                         <i class="fas fa-times ml-auto cursor-pointer" @click="deleteTask(task.id)"></i>
                     </li>

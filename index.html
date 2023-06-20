@@ -44,7 +44,7 @@
 
                 <!-- new task -->
                 <div class="d-flex align-items-center">
-                    <input type="text" v-model.trim="newTaskText" class="form-control" placeholder="Inserisci una nuova task....">
+                    <input type="text" v-model.trim="newTaskText" @keyup.enter="addTask" class="form-control" placeholder="Inserisci una nuova task....">
                     <button @click="addTask" class="btn btn-primary ml-2">Aggiungi</button>
                 </div>
             </main>

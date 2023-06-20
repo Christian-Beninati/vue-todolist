@@ -40,7 +40,7 @@ const app = createApp({
                 };
 
                 this.tasks.push(newTask);
-                // / Resetto il campo di input dopo aver aggiunto il task
+                // / Resetto il campo input dopo aver aggiunto il task
                 this.newTaskText = ''; 
             }
         }

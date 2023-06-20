@@ -12,10 +12,11 @@ const app = createApp({
             newTaskText: '',
             // Array di oggetti
             tasks: [
-            { id: 1, done: false, text: 'Fare la Milestone 1'},
-            { id: 2, done: false, text: 'Fare la Milestone 2'},
-            { id: 3, done: false, text: 'Fare la Milestone 3'},
-            { id: 4, done: false, text: 'Fare i Bonus'},
+            { id: 1, done: true, text: 'Fare la Milestone 1'},
+            { id: 2, done: true, text: 'Fare la Milestone 2'},
+            { id: 3, done: true, text: 'Fare la Milestone 3'},
+            { id: 4, done: true, text: 'Fare i Bonus'},
+            { id: 5, done: false, text: 'Fare il SuperBonus'},
             ],
         }
     },

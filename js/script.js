@@ -9,7 +9,7 @@ const app = createApp({
     data(){               
         return{
             // proprietà per memorizzare il testo del nuovo task
-            newTask: '',
+            newTaskText: '',
             // Array di oggetti
             tasks: [
             { id: 1, done: false, text: 'Fare la Milestone 1'},
@@ -20,6 +20,7 @@ const app = createApp({
         }
     },
     methods: {
+        // Cambio stato (done false - done true)
         toggleTaskStatus(task) {
             task.done = !task.done;
         },
